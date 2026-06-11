@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -175,6 +175,40 @@
       <p class="section-label">PROJECTS</p>
       <h2 class="section-title">Things I've built</h2>
       <div class="projects-grid">
+
+        <!-- Project 0: DocChat RAG -->
+        <div class="proj-card" id="proj-docchat">
+          <div class="proj-card-header">
+            <span class="proj-icon">📚</span>
+            <div style="display: flex; gap: 10px;">
+              <a href="https://huggingface.co/spaces/rachana28/DocChat-Advanced-RAG" target="_blank" class="proj-repo-link" id="link-docchat-demo">Live Demo ↗</a>
+              <a href="https://github.com/rachananijalingappa/DocChat_RAG" target="_blank" class="proj-repo-link" id="link-docchat-repo">View Repository ↗</a>
+            </div>
+          </div>
+          <p class="proj-tags">Python · FastAPI · LangChain · Docker</p>
+          <h3 class="proj-title">DocChat: Advanced RAG Microservice</h3>
+          <p class="proj-desc">Built an end-to-end Retrieval-Augmented Generation (RAG) pipeline to instantly query massive PDF documents, completely bypassing traditional LLM context limits.</p>
+          <div class="proj-value-box">
+            <p class="proj-value-label">Key Result</p>
+            <p class="proj-value-text">Upgraded standard semantic search using Cohere Re-ranking to drastically improve answer precision. Engineered a custom LLM-as-a-judge evaluator to score Faithfulness and Relevance, eliminating hallucinations.</p>
+          </div>
+          <ul class="proj-bullets">
+            <li>Built a decoupled FastAPI microservice and Streamlit frontend via Docker containers.</li>
+            <li>Implemented a Contextual Compression Retriever with ChromaDB and Cohere.</li>
+            <li>Created an automated LLM Evaluation pipeline using Groq (Llama-3).</li>
+            <li>Successfully deployed as a public web application on Hugging Face Spaces.</li>
+          </ul>
+          <div class="proj-stack-tags">
+            <span class="proj-stack-tag">Python</span>
+            <span class="proj-stack-tag">FastAPI</span>
+            <span class="proj-stack-tag">Streamlit</span>
+            <span class="proj-stack-tag">LangChain</span>
+            <span class="proj-stack-tag">ChromaDB</span>
+            <span class="proj-stack-tag">Cohere</span>
+            <span class="proj-stack-tag">Groq Llama-3</span>
+            <span class="proj-stack-tag">Docker</span>
+          </div>
+        </div>
 
         <!-- Project 1 -->
         <div class="proj-card" id="proj-fraud">
