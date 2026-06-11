@@ -2,8 +2,7 @@
 
 Welcome to the repository for my professional portfolio website! This site highlights my experience bridging software engineering foundations with artificial intelligence to build scalable, high-performance systems.
 
-🔗 **Live Website:** [https://rachana-n.github.io](https://rachana-n.github.io)  
-📄 **Resume:** [View My Resume](Rachana_n_resume.pdf)
+🔗 **Live Website:** [https://rachana-n.github.io](https://rachananijalingappa.github.io/rachana-n.github.io/)
 
 ---
 
@@ -30,17 +29,22 @@ I am a Software Engineer with **5+ years of experience** in FinTech and Healthca
 
 ## 🧠 Highlighted Projects
 
-### 1. [Credit Card Fraud Detection](https://github.com/rachananijalingappa/CreditCard_Fraud_Detection)
+### 1. [DocChat: Advanced RAG Microservice](https://github.com/rachananijalingappa/DocChat_RAG)
+* **Goal:** Built an end-to-end Retrieval-Augmented Generation (RAG) pipeline to instantly query massive PDF documents, completely bypassing traditional LLM context limits.
+* **Outcome:** Upgraded standard semantic search using Cohere Re-ranking to improve precision and engineered a custom LLM-as-a-judge evaluator to score Faithfulness and Relevance, eliminating hallucinations.
+* **Stack:** Python, FastAPI, Streamlit, LangChain, ChromaDB, Groq Llama-3, Cohere, Docker.
+
+### 2. [Credit Card Fraud Detection](https://github.com/rachananijalingappa/CreditCard_Fraud_Detection)
 * **Goal:** Built an end-to-end Machine Learning pipeline analyzing 283,726 transactions.
 * **Outcome:** Optuna-tuned LightGBM achieved an **85.9% F1-Score** and **97.3% precision** out of 13 compared models. 
 * **Stack:** Python, TensorFlow, LightGBM, Scikit-learn, Optuna, SHAP, Pandas.
 
-### 2. [ShopNova E-Commerce Modular Monolith](https://github.com/rachananijalingappa/E-Commerce-Monolith)
+### 3. [ShopNova E-Commerce Modular Monolith](https://github.com/rachananijalingappa/E-Commerce-Monolith)
 * **Goal:** Designed a production-grade modular monolith architecture with 3 schema-separated bounded contexts.
 * **Outcome:** Enabled complete domain isolation (Catalog, Orders, Basket) with cross-module domain events via MediatR and full observability.
 * **Stack:** .NET 8, EF Core, MediatR, Ocelot API Gateway, Serilog, JWT.
 
-### 3. [Household Sustainability Data Analysis](https://github.com/rachananijalingappa/Household-Sustainability-Data-Analysis)
+### 4. [Household Sustainability Data Analysis](https://github.com/rachananijalingappa/Household-Sustainability-Data-Analysis)
 * **Goal:** Modelled carbon footprint drivers and predicted recycling behaviors across 240 UK households.
 * **Outcome:** Linear regression model explained **86.6% of variance** in carbon footprints; binary logistic regression predicted recycling with **90% accuracy**.
 * **Stack:** R, MASS, lmtest, Tidyverse, R Markdown.
