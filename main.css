@@ -42,7 +42,8 @@ img { max-width: 100%; }
    LAYOUT HELPERS
    ========================================= */
 .container {
-  max-width: 1350px;
+  max-width: 92%;
+  max-width: clamp(1200px, 92%, 1800px);
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -147,7 +148,8 @@ section {
 }
 
 .nav-inner {
-  max-width: 1350px;
+  max-width: 92%;
+  max-width: clamp(1200px, 92%, 1800px);
   margin: 0 auto;
   padding: 0 24px;
   height: 64px;
@@ -201,7 +203,7 @@ section {
 .hero-grid-compact {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
+  gap: 120px;
   align-items: center;
 }
 
@@ -255,9 +257,9 @@ section {
 }
 
 .hero-bio p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--muted);
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 16px;
 }
 
@@ -338,7 +340,7 @@ section {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 120px;
   align-items: start;
   margin-bottom: 48px;
 }
@@ -405,7 +407,7 @@ section {
 .background-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 120px;
 }
 
 .skills-group {

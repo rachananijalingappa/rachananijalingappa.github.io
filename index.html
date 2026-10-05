@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rachana Nijalingappa | Software Engineer &amp; AI Specialist</title>
+  <title>Rachana Nijalingappa | AI Engineer and Backend Engineer</title>
   <meta name="description"
     content="Portfolio of Rachana Nijalingappa — Software Engineer with 5+ years in FinTech and Healthcare, currently pursuing MSc in Artificial Intelligence at Brunel University London." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,13 +38,12 @@
       <div class="hero-grid-compact">
         <div class="hero-left-compact">
           <div class="hero-tags-compact">
-            <span class="badge">Software Engineer</span>
-            <span class="badge">AI/ML</span>
+            <span class="badge">AI Engineer</span>
+            <span class="badge">Backend Engineer</span>
           </div>
-          <h1 class="hero-heading-compact">Building intelligent systems with strong <span
-              style="white-space: nowrap;">engineering foundations.</span></h1>
+          <h1 class="hero-heading-compact">I build LLM and RAG systems on <span style="white-space: nowrap;">production backend foundations.</span></h1>
           <p class="hero-sub-compact">
-            Explore my experience in AI, Software Engineering and Cloud Technologies.
+            Based in Birmingham, open to AI Engineer and Backend Engineer roles across the UK.
           </p>
           <div class="hero-btns-compact">
             <a href="Rachana_n_resume.pdf" target="_blank" class="btn btn-primary">View My Resume &rarr;</a>
@@ -54,13 +53,8 @@
         </div>
         <div class="hero-right-compact">
           <div class="hero-bio">
-            <p>I started my career building IoT and healthcare applications at Harman, where I learned how to design
-              APIs that needed to be reliable, secure, and scalable. Over the years I moved through Publicis Sapient and
-              Commonwealth Bank of Australia, picking up everything from Python-based data pipelines to .NET
-              microservices on Azure.</p>
-            <p>To complement my engineering foundations, I am completing an MSc in Artificial Intelligence at Brunel
-              University London. I specialize in transforming advanced AI models including NLP, LLMs, and computer
-              vision into scalable, real-world software solutions.</p>
+            <p>I spent 5+ years as a backend engineer in banking and healthcare. At Harman I built .NET Core services on Azure for NHS and IoT clients; at Publicis Sapient I built Python data pipelines for banking clients; at Commonwealth Bank I built payment APIs in .NET 8, including work on tokenising sensitive payment data.</p>
+            <p>I completed an MSc in Artificial Intelligence at Brunel University London in 2026. I now build LLM applications with the same engineering habits: tested APIs, observability and careful handling of sensitive data.</p>
           </div>
         </div>
       </div>
@@ -176,6 +170,37 @@
       <h2 class="section-title">Things I've built</h2>
       <div class="projects-grid">
 
+        
+        <!-- Project: MSc Dissertation -->
+        <div class="proj-card" id="proj-dissertation">
+          <div class="proj-card-header">
+            <span class="proj-icon">🎓</span>
+            <div style="display: flex; gap: 10px;">
+            </div>
+          </div>
+          <p class="proj-tags">Python • LangGraph • ChromaDB • Evaluation</p>
+          <h3 class="proj-title">Agentic RAG for Multi-Source Financial QA | MSc Dissertation</h3>
+          <p class="proj-desc">Built and compared five QA methods in LangGraph with GPT-4o-mini (no retrieval, dense RAG, HyDE, static source routing, adaptive self-correction) over 10-Q filings and yfinance data.</p>
+          <div class="proj-value-box">
+            <p class="proj-value-label">Key Result</p>
+            <p class="proj-value-text">Showed static routing raised correctness over single-source RAG from 56.7% to 91.8% on 97 scorable questions, with 97.6% exact-match source selection.</p>
+          </div>
+          <ul class="proj-bullets">
+            <li>Designed a 150-question benchmark (factual, numerical, sentiment, analytical, unanswerable).</li>
+            <li>Evaluated 750 answers with correctness scoring, RAGAS, Precision@5 and MRR, using Wilson intervals, exact McNemar tests and paired bootstrap.</li>
+            <li>Classified failures with an eight-type taxonomy: confirmed errors came from numerical parsing (6) and retrieval of another company's figures (2).</li>
+          </ul>
+          <div class="proj-stack-tags">
+            <span class="proj-stack-tag">Python</span>
+            <span class="proj-stack-tag">LangGraph</span>
+            <span class="proj-stack-tag">ChromaDB</span>
+            <span class="proj-stack-tag">GPT-4o-mini</span>
+            <span class="proj-stack-tag">RAGAS</span>
+            <span class="proj-stack-tag">BERTScore</span>
+            <span class="proj-stack-tag">yfinance</span>
+          </div>
+        </div>
+
         <!-- Project 0: DocChat RAG -->
         <div class="proj-card" id="proj-docchat">
           <div class="proj-card-header">
@@ -185,31 +210,32 @@
               <a href="https://github.com/rachananijalingappa/DocChat_RAG" target="_blank" class="proj-repo-link" id="link-docchat-repo">View Repository ↗</a>
             </div>
           </div>
-          <p class="proj-tags">Python · FastAPI · LangChain · Docker</p>
-          <h3 class="proj-title">DocChat: Advanced RAG Microservice</h3>
-          <p class="proj-desc">Built an end-to-end Retrieval-Augmented Generation (RAG) pipeline to instantly query massive PDF documents, completely bypassing traditional LLM context limits.</p>
+          <p class="proj-tags">Python • LangGraph • FastAPI • Docker</p>
+          <h3 class="proj-title">DocChat: Agentic RAG Microservice</h3>
+          <p class="proj-desc">Built a LangGraph routing workflow with GPT-4o-mini that sends each query to document retrieval or a web-search fallback, replacing a single-path RAG pipeline.</p>
           <div class="proj-value-box">
             <p class="proj-value-label">Key Result</p>
-            <p class="proj-value-text">Upgraded standard semantic search using Cohere Re-ranking to drastically improve answer precision. Engineered a custom LLM-as-a-judge evaluator to score Faithfulness and Relevance, eliminating hallucinations.</p>
+            <p class="proj-value-text">Added contextual compression and Cohere re-ranking over ChromaDB retrieval; in a 15-question synthetic pilot scored by a GPT-4o-mini judge, faithfulness rose from 92.0% to 98.7%.</p>
           </div>
           <ul class="proj-bullets">
-            <li>Built a decoupled FastAPI microservice and Streamlit frontend via Docker containers.</li>
-            <li>Implemented a Contextual Compression Retriever with ChromaDB and Cohere.</li>
-            <li>Created an automated LLM Evaluation pipeline using Groq (Llama-3).</li>
-            <li>Successfully deployed as a public web application on Hugging Face Spaces.</li>
+            <li>Wrote an evaluation script that generates test questions from document chunks and scores answers for faithfulness and relevance.</li>
+            <li>Implemented an isolated LLM pre-check that screens inputs for prompt injection before retrieval, achieving 100% detection.</li>
+            <li>Deployed a FastAPI backend and Streamlit frontend in Docker on Hugging Face Spaces, with LangSmith tracing across the pipeline.</li>
           </ul>
           <div class="proj-stack-tags">
             <span class="proj-stack-tag">Python</span>
+            <span class="proj-stack-tag">LangGraph</span>
+            <span class="proj-stack-tag">LangChain</span>
             <span class="proj-stack-tag">FastAPI</span>
             <span class="proj-stack-tag">Streamlit</span>
-            <span class="proj-stack-tag">LangChain</span>
+            <span class="proj-stack-tag">OpenAI API</span>
+            <span class="proj-stack-tag">Cohere API</span>
             <span class="proj-stack-tag">ChromaDB</span>
-            <span class="proj-stack-tag">Cohere</span>
-            <span class="proj-stack-tag">Groq Llama-3</span>
+            <span class="proj-stack-tag">LangSmith</span>
             <span class="proj-stack-tag">Docker</span>
           </div>
         </div>
-
+        
         <!-- Project 1 -->
         <div class="proj-card" id="proj-fraud">
           <div class="proj-card-header">
@@ -223,15 +249,13 @@
             models across classical ML, gradient boosting, and deep learning approaches.</p>
           <div class="proj-value-box">
             <p class="proj-value-label">Key Result</p>
-            <p class="proj-value-text">Optuna-tuned LightGBM achieved 85.9% F1-Score and 97.3% precision best among
-              all 13 models. SMOTE applied strictly within training data to prevent leakage.</p>
+            <p class="proj-value-text">Tuned LightGBM with Optuna (30 trials, 3-fold stratified CV) reaching a PR-AUC of 0.817 and an 85.9% F1-Score (97.3% precision). SMOTE was applied strictly to the training split to prevent data leakage.</p>
           </div>
           <ul class="proj-bullets">
-            <li>Trained 13 models including Logistic Regression, Random Forest, XGBoost, LSTM, 1D-CNN, and Autoencoder
-            </li>
-            <li>Improved fraud recall to 76.8% using SMOTE exclusively on training data</li>
-            <li>Used SHAP to identify top fraud-predictive features and explain model decisions</li>
-            <li>Ran unsupervised anomaly detection using Isolation Forest and K-Means clustering</li>
+            <li>Trained and evaluated 13 models across classical ML, gradient boosting, and deep learning (LSTM, 1D-CNN, Autoencoder).</li>
+            <li>Applied SMOTE to the training set only, keeping the test set untouched to ensure honest evaluation.</li>
+            <li>Used SHAP to identify top fraud-predictive features and explain model decisions.</li>
+            <li>Benchmarked unsupervised anomaly detection using Isolation Forest and K-Means clustering.</li>
           </ul>
           <div class="proj-stack-tags">
             <span class="proj-stack-tag">Python</span>
@@ -279,38 +303,7 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="proj-card" id="proj-sustainability">
-          <div class="proj-card-header">
-            <span class="proj-icon">📊</span>
-            <a href="https://github.com/rachananijalingappa/Household-Sustainability-Data-Analysis" target="_blank"
-              class="proj-repo-link" id="link-sustainability">View Repository ↗</a>
-          </div>
-          <p class="proj-tags">R · Statistical Modelling · Data Analysis</p>
-          <h3 class="proj-title">Household Sustainability Data Analysis</h3>
-          <p class="proj-desc">Statistical analysis of 240 UK households to model carbon footprint drivers and predict
-            recycling behaviour using regression techniques in R.</p>
-          <div class="proj-value-box">
-            <p class="proj-value-label">Key Result</p>
-            <p class="proj-value-text">Linear model explained 86.6% of variance in household carbon footprints (Adjusted
-              R² = 0.8657). Binary logistic regression for recycling achieved 90% accuracy.</p>
-          </div>
-          <ul class="proj-bullets">
-            <li>Stepwise AIC selection identified energy consumption as the dominant carbon driver (+1,861 kg CO₂ per
-              1,000 kWh)</li>
-            <li>Environmental concern was the strongest recycling predictor (Odds Ratio 5.81)</li>
-            <li>Fully reproducible R Markdown report with diagnostics and validation steps</li>
-          </ul>
-          <div class="proj-stack-tags">
-            <span class="proj-stack-tag">R</span>
-            <span class="proj-stack-tag">MASS</span>
-            <span class="proj-stack-tag">lmtest</span>
-            <span class="proj-stack-tag">tidyverse</span>
-            <span class="proj-stack-tag">R Markdown</span>
-          </div>
         </div>
-
-      </div>
     </div>
   </section>
 

@@ -1,58 +1,44 @@
-# Rachana Nijalingappa | Software Engineer & AI/ML Specialist
+﻿# Rachana Nijalingappa
 
-Welcome to the repository for my professional portfolio website! This site highlights my experience bridging software engineering foundations with artificial intelligence to build scalable, high-performance systems.
+AI Engineer and Backend Engineer. I build LLM and RAG applications in Python, on top of 5+ years of production backend work in C#, .NET and Azure for banking and healthcare. MSc Artificial Intelligence, Brunel University London (2026).
 
-🔗 **Live Website:** [https://rachana-n.github.io](https://rachananijalingappa.github.io/rachana-n.github.io/)
+Based in Birmingham, open to AI Engineer and Backend Engineer roles across the UK.
 
----
-
-## 🚀 About Me
-
-I am a Software Engineer with **5+ years of experience** in FinTech and Healthcare sectors, currently pursuing an **MSc in Artificial Intelligence** at Brunel University London. My expertise lies in designing reliable, secure, and scalable backend architectures and integrating advanced AI/ML solutions (NLP, LLMs, and computer vision) into production-grade systems.
+**Portfolio:** [rachananijalingappa.github.io/rachana-n.github.io](https://rachananijalingappa.github.io/rachana-n.github.io/)
 
 ---
 
-## 🛠️ Tech Stack & Skills
+## Projects
 
-### **Core Software Engineering**
-* **Languages:** C#, JavaScript, SQL
-* **Backend Frameworks:** .NET 8, .NET Core, Microservices, REST APIs, CQRS
-* **Cloud & DevOps:** Microsoft Azure (Key Vault, Storage, Functions, Service Bus), AWS, Docker, Kubernetes, CI/CD pipelines
-* **Testing & Tools:** NUnit, Moq, SQL Server, MongoDB, Git
+### Agentic RAG for Multi-Source Financial QA (MSc dissertation)
+- Built and compared five QA methods in LangGraph with GPT-4o-mini over 10-Q filings and yfinance market data.
+- Static routing raised answer correctness from 56.7% (single-source RAG) to 91.8% on 97 scorable questions, with 97.6% exact-match source selection on 125 routable questions.
+- **Stack:** Python, LangGraph, ChromaDB, GPT-4o-mini, RAGAS, BERTScore, yfinance
 
-### **AI & Machine Learning**
-* **Languages:** Python, R
-* **Frameworks & Libraries:** TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Optuna, SHAP
-* **Domains:** Deep Learning, Natural Language Processing (NLP), Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Statistical Modelling
+### [DocChat: Routed RAG Service](https://github.com/rachananijalingappa/DocChat_RAG) ([live demo](https://huggingface.co/spaces/rachana28/DocChat-Advanced-RAG))
+- LangGraph router sends each query to document retrieval or a web-search fallback, replacing a single-path RAG pipeline.
+- Retrieval with ChromaDB, contextual compression and Cohere re-ranking; LLM-as-a-judge scoring for faithfulness and relevance; prompt-injection screening; LangSmith tracing.
+- Pilot evaluation on 15 synthetic questions: re-ranking raised mean faithfulness from 0.92 to 0.99. The LLM-based injection pre-check flagged all 20 standard injection templates tested [and 0 of N benign questions].
+- **Stack:** Python, LangGraph, LangChain, FastAPI, Streamlit, OpenAI API, Cohere API, ChromaDB, LangSmith, Docker
 
----
+### [Credit Card Fraud Detection](https://github.com/rachananijalingappa/CreditCard_Fraud_Detection)
+- Compared 13 models on 283,726 transactions with 0.17% fraud; SMOTE applied inside CV folds only.
+- Optuna-tuned LightGBM (30 trials, 3-fold stratified CV) reached PR-AUC 0.817 and F1 0.859 (precision 0.973, recall 0.768) on a held-out test set.
+- **Stack:** Python, scikit-learn, LightGBM, TensorFlow, Optuna, SHAP, pandas
 
-## 🧠 Highlighted Projects
-
-### 1. [DocChat: Advanced RAG Microservice](https://github.com/rachananijalingappa/DocChat_RAG)
-* **Goal:** Built an end-to-end Retrieval-Augmented Generation (RAG) pipeline to instantly query massive PDF documents, completely bypassing traditional LLM context limits.
-* **Outcome:** Upgraded standard semantic search using Cohere Re-ranking to improve precision and engineered a custom LLM-as-a-judge evaluator to score Faithfulness and Relevance, eliminating hallucinations.
-* **Stack:** Python, FastAPI, Streamlit, LangChain, ChromaDB, Groq Llama-3, Cohere, Docker.
-
-### 2. [Credit Card Fraud Detection](https://github.com/rachananijalingappa/CreditCard_Fraud_Detection)
-* **Goal:** Built an end-to-end Machine Learning pipeline analyzing 283,726 transactions.
-* **Outcome:** Optuna-tuned LightGBM achieved an **85.9% F1-Score** and **97.3% precision** out of 13 compared models. 
-* **Stack:** Python, TensorFlow, LightGBM, Scikit-learn, Optuna, SHAP, Pandas.
-
-### 3. [ShopNova E-Commerce Modular Monolith](https://github.com/rachananijalingappa/E-Commerce-Monolith)
-* **Goal:** Designed a production-grade modular monolith architecture with 3 schema-separated bounded contexts.
-* **Outcome:** Enabled complete domain isolation (Catalog, Orders, Basket) with cross-module domain events via MediatR and full observability.
-* **Stack:** .NET 8, EF Core, MediatR, Ocelot API Gateway, Serilog, JWT.
-
-### 4. [Household Sustainability Data Analysis](https://github.com/rachananijalingappa/Household-Sustainability-Data-Analysis)
-* **Goal:** Modelled carbon footprint drivers and predicted recycling behaviors across 240 UK households.
-* **Outcome:** Linear regression model explained **86.6% of variance** in carbon footprints; binary logistic regression predicted recycling with **90% accuracy**.
-* **Stack:** R, MASS, lmtest, Tidyverse, R Markdown.
+### [ShopNova: .NET Modular Monolith](https://github.com/rachananijalingappa/E-Commerce-Monolith)
+- Three bounded contexts (Catalog, Orders, Basket) with 13 REST endpoints, CQRS via MediatR and cross-module domain events (OrderPlacedEvent clears the basket).
+- Ocelot API gateway, FluentValidation pipeline, JWT authentication, Serilog correlation IDs, NUnit and Moq tests. Each module's DbContext has its own schema configured; the repo runs on EF Core InMemory so it starts with `dotnet run` and no database setup.
+- **Stack:** C#, .NET 8, EF Core, MediatR, Ocelot, Serilog, NUnit, Moq
 
 ---
 
-## 📬 Connect With Me
+## Tech
 
-* **Email:** [nrachananijalingappa@gmail.com](mailto:nrachananijalingappa@gmail.com)
-* **LinkedIn:** [linkedin.com/in/n-rachana](https://www.linkedin.com/in/n-rachana)
-* **GitHub:** [github.com/rachananijalingappa](https://github.com/rachananijalingappa)
+- **AI and ML:** Python, LLMs, RAG, LangGraph, LangChain, ChromaDB, OpenAI API, RAGAS, scikit-learn, LightGBM, TensorFlow, SHAP, pandas, R
+- **Backend:** C#, .NET 8, ASP.NET Core, FastAPI, REST APIs, CQRS, SQL Server
+- **Cloud and tooling:** Azure (Key Vault, Storage, Functions, Service Bus), Docker, CI/CD, Git, NUnit, Moq
+
+---
+
+[LinkedIn](https://www.linkedin.com/in/n-rachana) · [Email](mailto:nrachananijalingappa@gmail.com)
