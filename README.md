@@ -4,7 +4,7 @@ AI Engineer and Backend Engineer. I build LLM and RAG applications in Python, on
 
 Based in Birmingham, open to AI Engineer and Backend Engineer roles across the UK.
 
-**Portfolio:** [rachananijalingappa.github.io/rachana-n.github.io](https://rachananijalingappa.github.io/rachana-n.github.io/)
+**Portfolio:** [rachananijalingappa.github.io](https://rachananijalingappa.github.io/)
 
 ---
 
